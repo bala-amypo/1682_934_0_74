@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo.entity.Student;
 import com.example.demo.repository.StudentRepo;
 import com.example.demo.service.StudentService;
-
+@Service
 public class StudentServiceImpl implements StudentService{
     @Autowired
     StudentRepo stRepo;
@@ -15,15 +15,15 @@ public class StudentServiceImpl implements StudentService{
     return stRepo.save(st);
  }   
  @Override
-  public List Student getAllStudent (){
+  public List <Student> getAllStudent (){
     return stRepo.findAll();
   }
   @Override
-  public Optional Student getOneStudent(Long id){
-    return stRepo.findById(st);
+  public Optional <Student> getOneStudent(Long id){
+    return stRepo.findById(id);
   }
   @Override
   public void deleteStudent(Long id){
-    stRepo.deletebyId(st);
+    stRepo.deletebyId(id);
   }
 }
