@@ -8,7 +8,6 @@ import java.util.List;
 
 @Configuration
 public class SwaggerConfig {
-
     @Bean
     public OpenAPI swagger() {
         return new OpenAPI()
