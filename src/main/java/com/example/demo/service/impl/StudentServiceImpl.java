@@ -15,7 +15,15 @@ public class StudentServiceImpl implements StudentService{
     return stRepo.save(st);
  }   
  @Override
-  public List Student(getall Student st){
-    return
+  public List Student getAllStudent (){
+    return stRepo.findAll();
+  }
+  @Override
+  public Optional Student getOneStudent(Long id){
+    return stRepo.findById(st);
+  }
+  @Override
+  public void deleteStudent(Long id){
+    stRepo.deletebyId(st);
   }
 }
