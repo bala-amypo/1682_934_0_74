@@ -14,15 +14,15 @@ public class StudentServiceImpl implements StudentService{
     return strepo.save(st);
  }   
  @Override
-  public List <Student> getAllStudents (){
+  public List<Student>getAllStudents (){
     return strepo.findAll();
-  }
+  } 
   @Override
-  public Optional <Student> getOneStudent(Long id){
+  public Optional<Student> getOneStudent(Long id){
     return strepo.findById(id);
   }
   @Override
   public void deleteStudent(Long id){
-    strepo.deletebyId(id);
+    strepo.deleteById(id);
   }
 }
