@@ -8,22 +8,21 @@ import com.example.demo.repository.StudentRepo;
 import com.example.demo.service.StudentService;
 @Service
 public class StudentServiceImpl implements StudentService{
-    @Autowired
-    StudentRepo stRepo;
+    @Autowired StudentRepo strepo;
     @Override
  public Student insertStudent(Student st){
-    return stRepo.save(st);
+    return strepo.save(st);
  }   
  @Override
-  public List <Student> getAllStudent (){
-    return stRepo.findAll();
+  public List <Student> getAllStudents (){
+    return strepo.findAll();
   }
   @Override
   public Optional <Student> getOneStudent(Long id){
-    return stRepo.findById(id);
+    return strepo.findById(id);
   }
   @Override
   public void deleteStudent(Long id){
-    stRepo.deletebyId(id);
+    strepo.deletebyId(id);
   }
 }
